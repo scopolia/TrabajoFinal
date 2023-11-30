@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/tablaContactos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="header"></header>
+
+    <main>
+
+        <section class="container">
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <a class="nuevo" href="./ingresarContacto.html">Nuevo</a>
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+
+                    </section>
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Dni</th>
+                                        <th>Telefono</th>
+                                        <th>Mail</th>
+                                        <th>Comentario</th>
+                                        <th>Eliminar</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="contacto in contactos">
+                                        <td >{{contacto.id}}</td>
+                                        <td>{{contacto.nombre}}</td>
+                                        <td>{{contacto.apellido}}</td>
+                                        <td>{{contacto.dni}}</td>
+                                        <td>{{contacto.telefono}}</td>
+                                        <td>{{contacto.mail}}</td>
+                                        <td>{{contacto.texto}}</td>
+                                      
+                                        
+                                        <td>
+                                            
+                                            <button type="button" v-on:click="eliminar(contacto.id)" ><i class="fa-solid fa-trash fa-lg" ></i></button>
+                                        </td>
+                                        <td>
+                                            <a class="boton" :href="'editarContacto.html?id='
+                                            + contacto.id+
+                                            '&nombre=' 
+                                            +contacto.nombre+
+                                            '&apellido='+contacto.apellido+
+                                             '&dni='+contacto.dni +  
+                                             '&telefono='
+                                             +contacto.telefono+
+                                             '&texto='
+                                             +contacto.texto"><i class="fa-solid fa-user-pen"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <h3 class="text__footer">Codo a Codo </h3>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-twitter" style="color: #f2f4f8;"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="/BACK/JS_BACK/ingresarContacto.js"></script>
+    <script src="/BACK/JS_BACK/header.js"></script>
+</body>
+</html>

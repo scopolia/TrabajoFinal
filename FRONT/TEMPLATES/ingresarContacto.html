@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/formContacto.css">
+
+  
+      
+      
+    
+    
+    <title>Registrar</title>
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <main>
+
+        <section>
+            <div class="container">
+
+                <form action="" class="formulario">
+                    <div class="entrada">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="dni">DNI:</label>
+                        <input type="text" name="dni" id="dni">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="telefono">Imagen:</label>
+                        <input type="text" name="telefono" id="telefono">
+                    </div>
+                    <div class="entrada">
+                        <label for="mail">Mail:</label>
+                        <input type="text" name="mail" id="mail">
+                    </div>
+                    <div class="entrada">
+                        <label for="texto">Consulta:</label>
+                        <textarea name="texto" id="texto" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <div class=" btn-entrada">
+                        <i class="fa-brands fa-youtube"></i>
+                        <button class="btn" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <h3 class="text__footer">Codo a Codo </h3>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-twitter" style="color: #f2f4f8;"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="/BACK/JS_BACK/ingresarContacto.js"></script>
+    <script src="/BACK/JS_BACK/header.js"></script>
+   
+  
+</body>
+
+</html>

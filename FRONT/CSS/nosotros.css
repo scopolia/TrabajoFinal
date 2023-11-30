@@ -1,0 +1,115 @@
+.titulos {
+    font-size: 4vh;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(230, 227, 67);
+    text-align: center;
+    border-bottom: 0.2vh solid rgb(230, 227, 67);
+    padding: 0.2vw;
+}
+
+.t2, .data {
+    text-align: center;
+    border-bottom: none;
+    color: rgb(230, 227, 67);
+    font-weight: bold;
+}
+
+.parrafos{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0.2vw;
+    color: aliceblue;
+}
+
+.parrafos, .titulos {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.nombre{
+    color: rgb(230, 227, 67);
+    font-weight: bold;
+}
+
+.img1 {
+    width: 50vw;
+    height: 55vh;
+    margin:0.5vw;
+}
+
+.s1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.1vw;
+}
+
+.d2 {
+    margin: 0.5vw;
+}
+
+.s2 {
+    width: 25vw;
+    height: 18vh;
+    margin: 0.5vw;
+    background: linear-gradient(rgb(2, 2, 37), rgb(138, 130, 131));
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px outset #000;
+}
+
+#info {
+    color: aliceblue;
+}
+
+.correo {
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px){
+    .s1{
+        flex-wrap: wrap;
+    }
+
+    .img1 {
+        width: 100%;
+        height: 55vh;
+    }
+
+    .s2{
+        overflow: hidden;
+        width: 45vw;
+        height: 18vh;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .s1{
+        flex-wrap: wrap;
+    }
+
+    .img1 {
+        width:100%;
+        height: 55vh;
+    }
+
+    .s2{
+        overflow: hidden;
+        width: 45vw;
+        height: 18vh;
+    }
+}

@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 151, 151)
+}
+.formulario{
+    display: grid;
+    grid-template-rows: repeat(6,1fr) 3fr;
+    width: 60%;
+    height: 90%;
+    border: solid 3px white;
+    box-shadow:  0px 0px 10px 0px white;
+    background: linear-gradient( 90deg, rgb(33, 33, 33), rgb(130, 128, 130));
+    border-radius: 5%;
+    padding: 20px;
+
+}
+
+.entrada{
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   width: 90%;
+   height: 90%;
+   padding: 10px;
+  
+    margin: 10px 0;
+    align-self: center;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    border: solid 1px white;
+}
+
+.entrada input{
+    height: 80%;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0 10px;
+    
+}
+.entrada label{
+    
+    align-self: center;
+    justify-self: center;
+    color: white;
+    border-radius: 5px;
+     
+}
+.entrada textarea{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    height: 80%;
+    border-radius: 5px;
+}
+.btn-entrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+
+}
+.btn{
+    width: 50%;
+    height: 80%;
+    border: solid black 2px;
+    border-radius: 5px;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    background: linear-gradient( 90deg, rgb(167, 166, 170), rgb(230, 227, 230));
+    color: black;
+}
+
+.btn:hover{
+    border: 2px solid white;
+    background-color: black;
+    box-shadow: 0 0 5px white;
+}
+@media screen and (max-width: 550px){
+    
+}
+
+

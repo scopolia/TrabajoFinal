@@ -1,0 +1,30 @@
+.container_productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container_titulo{
+     width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    /*font-size: 200 px;*/
+    font-size: 2.5em;
+    color: chartreuse;
+    /* font-family: Arial, Helvetica, sans-serif; */
+ }
+
+.producto img{
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 30px;
+}
+
+.producto p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
