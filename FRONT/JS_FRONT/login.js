@@ -27,7 +27,7 @@ form.addEventListener('submit', e=>{
         parrafo.innerHTML = msj;
     }else{
         parrafo.innerHTML = "Gracias por contactarte";
-        window.location.href = "./TEMPLATES/Contacto.html";
+        window.location.href = "opciones_back.html";
        form.reset()
 
 

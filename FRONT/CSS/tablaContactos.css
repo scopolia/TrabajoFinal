@@ -1,3 +1,6 @@
+
+
+
 *{
     margin: 0%;
     padding: 0%;
@@ -5,60 +8,23 @@
 }
 
 .container{
-    background: rgb(6, 27, 64);
+    
+     background-color:whitesmoke ;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     
 }
 
-
-table {
-    background-color: #3a75afde;
-    border-collapse: collapse;
-    width: 60vw;
-    max-width: 70vw;
-    margin: 2vw auto;
-    font-family: Arial, sans-serif;
-    height:auto;
-    
-  }
-
-th, td {
-    border: 2px solid #dddddd;
-
-    padding: 0.8vw;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    
-    
-  }
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #001F3F;
-    border: solid 2px white;
-}
 
 a{
     text-decoration: none;
     color: #dddddd;
     
 }
-
-td:hover{
-    background-color: #f2f2f285;
-    color:#001F3F
-}
-
-
-
-
 
 button{
     
@@ -95,11 +61,12 @@ button{
 .nuevo{
     color: #f2f2f2;
     margin-right: 2vh;
+    margin-bottom: 10px;
     background-color: rgb(122, 149, 177); /* Color de fondo */
     color: white; /* Color del texto */
     font-weight: bold;
     padding: 0.5vw 3vh; /* Relleno interno */
-    border: solid 1px white; /* Quita el borde */
+    border: solid 1px black; /* Quita el borde */
     border-radius: 2vw; /* Borde redondeado */
     text-align: center; /* Alineación del texto */
     text-decoration: none; /* Quita el subrayado predeterminado */
@@ -108,7 +75,7 @@ button{
     cursor: pointer; /* Cambia el cursor al pasar el ratón */
 }
 .nuevo:hover{
-    box-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 10px black;
 }
 
 

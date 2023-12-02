@@ -1,11 +1,16 @@
 /*font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Indie Flower', cursive;*/
+*{
+    margin: 0;
+}
+
 body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    background-color: rgb(78, 75, 88);
+    
+    background-color:rgba(227, 227, 227, 0.812) ;
 }
 
 
@@ -40,12 +45,14 @@ body{
     font-family: 'Barlow Condensed';
     font-size: 2.5vw;
     text-decoration: none;
+    list-style: none;
 }
 
 
 .opciones__menu{
    margin-top: 3vh;
    transition: all 360ms;
+   list-style: none;
 }
 .opciones__menu:hover{
     transform: scale(1.2);

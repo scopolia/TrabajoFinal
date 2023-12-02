@@ -3,3 +3,6 @@ document.getElementById("header").innerHTML= `
             <a href="./tablaContactos.html">Tabla</a>
             <a href="./ingresarContacto.html">Ingresar contacto</a>
 </nav>`
+
+
+
