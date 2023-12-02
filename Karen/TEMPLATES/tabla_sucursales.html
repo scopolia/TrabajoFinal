@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../CSS/Style.css">
+        <link rel="stylesheet" href="../CSS/tabla_sucursales.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+
+        <title>Sucursales</title>
+
+    </head>
+    <body>
+        
+        <header id="header">
+            <div class="container_header">
+                <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>        
+                <div class="logo__empresa" ><a href="../index.html"><img class="logo__bt" src="../img/logo_final.png" ></a></div>
+                <nav  class="container__bt">
+                    <ul id="menu__item"class="item__menu">
+                        <li class="opciones__menu"><a href="opciones_back.html" class="texto__desplegado"><img class="inicio" src="../IMG/pagina-de-inicio.png"></a></li>
+        </header>
+
+        <main>
+
+            <section class="container">
+                <div id="app">
+                    <a class="tit" href="ingresar_sucursal.html">Nueva Sucursal</a>
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section>
+
+                    <section v-else>
+                        <div>
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Provincia</th>
+                                        <th>Localidad</th>
+                                        <th>Dirección</th>
+                                        <th>Teléfono</th>
+                                        <th>Email</th>
+                                        <th>Eliminar</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="sucursal in sucursales">
+                                        <td>{{ sucursal.id }}</td>
+                                        <td>{{ sucursal.provincia }}</td>
+                                        <td>{{ sucursal.localidad }}</td>
+                                        <td>{{ sucursal.direccion }}</td>
+                                        <td>{{ sucursal.telefono }}</td>
+                                        <td>{{ sucursal.email }}</td>
+                                        <td class="td_elim">
+                                            <button type="button" v-on:click="eliminar(sucursal.id)"><img class="elim" src="../IMG/basura.png"></button>
+                                        </td>
+                                        <td class="td_edit">
+                                            <button type="button"><a :href="'editar_sucursal.html?id='+sucursal.id+'&provincia='+sucursal.provincia+'&localidad='+sucursal.localidad+'&direccion='+sucursal.direccion+'&telefono='+sucursal.telefono+'&email='+sucursal.email"><img class="edit" src="../IMG/editar.png"></a></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <script src="../JS_BACK/tabla_sucursales.js"></script>
+    </body>
+</html>

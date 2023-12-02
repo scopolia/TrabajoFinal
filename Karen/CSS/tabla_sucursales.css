@@ -1,0 +1,167 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.inicio, .volver {
+    width: 4vw;
+    height: 8vh;
+}
+
+.edit, .elim {
+    width: 2vw;
+    height: 4vh;
+}
+
+.container, .container_form {
+    background: radial-gradient(circle, rgb(224, 224, 222), rgb(185, 185, 183));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: rgb(102, 136, 136);
+    width: 40vw;
+    height: 60vh;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrada {
+    margin-bottom: 3vh;
+}
+
+label{
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(11, 12, 12);
+}
+
+.tabla {
+    border-collapse: collapse;
+    width: 70vw;
+    max-width: 70vw;
+    margin: 4vw auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height:auto;
+}
+
+th, td {
+    padding: 1vw;
+    color: #0a0a0a;
+    border-radius: 3vh;
+}
+
+th {
+    background-color: rgb(102, 136, 136);
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+td {
+    text-align: left;
+}
+
+.td_edit, .td_elim {
+    text-align: center;
+}
+
+tr:hover {
+    background-color: rgb(240, 235, 211);
+}
+
+a {
+    text-decoration: none;
+}
+
+.tit:hover{
+    background-color: rgb(240, 235, 211);
+}
+
+.tit {
+    background-color: rgb(102, 136, 136);
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3vh;
+    padding: 2.5vh;
+}
+
+.grabar {
+    background-color: rgb(102, 136, 136);
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3vh;
+    padding: 2.5vh;
+}
+
+.grabar:hover{
+    background-color: rgb(240, 235, 211);
+}
+
+@media screen and (max-width:600px){
+    .container, .container_form {
+        flex-wrap: wrap;
+        overflow: auto;
+        width: 100%;
+    }
+    .tabla {
+        overflow-x: auto;
+        flex-wrap: wrap;
+        display: block;
+    }
+    form {
+        flex-wrap: wrap;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    .inicio, .volver {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .edit, .elim {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container, .container_form {
+        flex-wrap: wrap;
+        overflow: auto;
+        width: 100%;
+    }
+    .tabla {
+        overflow-x: auto;
+        flex-wrap: wrap;
+        display: block;
+    }
+    form {
+        flex-wrap: wrap;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    .inicio, .volver {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .edit, .elim {
+        max-width: 100%;
+        height: auto;
+    }
+}

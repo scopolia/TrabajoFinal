@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../CSS/Style.css">
+        <link rel="stylesheet" href="../CSS/tabla_sucursales.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Registrar</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container_header">
+            <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>        
+            <div class="logo__empresa" ><a href="../index.html"><img class="logo__bt" src="../img/logo_final.png" ></a></div>
+            <nav  class="container__bt">
+                <ul id="menu__item"class="item__menu">
+                    <li class="opciones__menu"><a href="tabla_sucursales.html" class="texto__desplegado"><img class="volver" src="../IMG/volver.png"></a></li>
+    </header>
+    <main>
+        <section>
+            <div class="container_form">
+                <form action="">
+                    <div class="entrada">
+                        <label for="provincia">Provincia:</label>
+                        <input type="text" name="provincia" id="provincia">
+                    </div>
+                    <div class="entrada">
+                        <label for="localidad">Localidad:</label>
+                        <input type="text" name="localidad" id="localidad">
+                    </div>
+                    <div class="entrada">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" name="direccion" id="direccion">
+                    </div>
+                    <div class="entrada">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="number" name="telefono" id="telefono">
+                    </div>
+                    <div class="entrada">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <button class="grabar" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../JS_BACK/ingresar_sucursal.js"></script>
+</body>
+</html>
