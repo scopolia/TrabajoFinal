@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ingresar_producto.css">
+    <link rel="stylesheet" href="../css/producto.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section>
+
+            <div class="container-form">
+                <form>
+                   
+                    <div>
+                        <label for="id">ID</label>
+                        <input type="number" name="id" id="idpro" disabled>
+                    </div>
+            
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nompro">
+                    </div>
+                    
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="text" name="precio" id="preciopro">
+                    </div>
+
+                    <div>
+                        <label for="urlimagen">URL Imagen</label>
+                        <input type="text" name="urlimagen" id="urlimgpro">
+                    </div>
+
+                    <button class="modificar" type="button" onclick="modificar()">Modificar</button>
+                </form>
+          
+          
+              </div>
+
+        </section>
+    </main>
+
+    
+    <footer></footer>
+
+    <script src="../js/editar_producto.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+</html>
