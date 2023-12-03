@@ -1,17 +1,13 @@
 /*font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Indie Flower', cursive;*/
-*{
-    margin: 0;
-}
-
 body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    
-    background-color:rgba(227, 227, 227, 0.812) ;
+    background-color: rgb(78, 75, 88);
 }
+
 
 
 
@@ -21,10 +17,13 @@ body{
     background: linear-gradient( 90deg, rgb(33, 33, 33), rgb(130, 128, 130))    
 }
 
+li,ul{
+    list-style: none;
+}
+
 
 .container__bt{
-    width: 100%;  
-    justify-self: flex-end;
+    margin-left: 35%;   
 }
 
 
@@ -46,14 +45,12 @@ body{
     font-family: 'Barlow Condensed';
     font-size: 2.5vw;
     text-decoration: none;
-    list-style: none;
 }
 
 
 .opciones__menu{
    margin-top: 3vh;
    transition: all 360ms;
-   list-style: none;
 }
 .opciones__menu:hover{
     transform: scale(1.2);
@@ -62,10 +59,8 @@ body{
 
 .item__menu{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     gap: 3vw;
-    
+    margin-left: 30%;
 }
 
 
@@ -128,7 +123,6 @@ body{
 
 
     .container__bt{
-       
         margin-top: 2vw;
         margin-left: -9vw;
         background: rgb(33, 33, 33);        
@@ -136,7 +130,6 @@ body{
 
    
     .item__menu{
-        
         visibility: hidden;
         height: -webkit-fill-available;
         width: 50%;
@@ -202,4 +195,3 @@ body{
 
     
 }
-
