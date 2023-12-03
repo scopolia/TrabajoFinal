@@ -2,36 +2,62 @@ document.addEventListener("DOMContentLoaded", function () {
     const seleccionElemento = document.getElementById("elementos");
     const infoDiv = document.getElementById("info");
 
-        function cargarInformacion(opcionId) {
-            fetch(`https://jsonplaceholder.typicode.com/users/${opcionId}`)
-                .then((response) => response.json())
-                .then((data) => {
-                    infoDiv.innerHTML = `
-                    <p><span class="data">EMAIL:</span> <a class="correo" href="mailto:correo@ejemplo.com">${data.email}</a></p>
-                    <p><span class="data">TELÉFONO:</span> ${data.phone}</p>
-                    `;
-                })
-                .catch((error) => {
-                    console.error("Error al cargar la información de la opción: " + error);
-                });
+    let listaSucursales = [];
+
+    function cargarInformacion(opcionId) {
+
+        if (!opcionId) {
+            infoDiv.innerHTML = '';
+            return;
+        }
+
+        const sucursalSeleccionada = listaSucursales.find(sucursal => sucursal.id == opcionId);
+
+        if (sucursalSeleccionada) {
+            const { direccion, email, telefono } = sucursalSeleccionada;
+
+            infoDiv.innerHTML = `
+
+            <div class="grid_data">
+
+                <div class="parrafo">
+                <p class="data">Dirección:</p>
+                <p class="data_valor">${direccion}</p>
+                </div>
+
+                <div class="parrafo">
+                <p class="data"> Email:</p>
+                <p class="data_valor mail">${email}</p>
+                </div>
+
+                <div class="parrafo">
+                <p class="data">Teléfono:</p>
+                <p class="data_valor">${telefono}</p>
+                </div>
+             </div>
+            `;
+        } else {
+            console.error("No se encontró la sucursal correspondiente al ID seleccionado.");
+        }
     }
 
-    const url = 'https://jsonplaceholder.typicode.com/users';
+    const url = 'https://sucursales.pythonanywhere.com/sucursales';
 
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
+            listaSucursales = data;
+
             data.forEach((elemento) => {
                 const opcion = document.createElement("option");
                 opcion.value = elemento.id;
-                opcion.text = elemento.name;
+                opcion.text = elemento.localidad;
                 seleccionElemento.appendChild(opcion);
             });
         })
         .catch((error) => {
             console.error("Error al cargar la lista de elementos: " + error);
         });
-
 
     seleccionElemento.addEventListener("change", function () {
         const seleccionOpcion = seleccionElemento.value;

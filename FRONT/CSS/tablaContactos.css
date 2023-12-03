@@ -26,23 +26,25 @@ a{
     
 }
 
-button{
+.boton_rojo{
     
    
+    color: #f2f2f2;
+    
     background-color: red; /* Color de fondo */
     color: white; /* Color del texto */
-    padding: 15px ; /* Relleno interno */
+    padding: 15px; /* Relleno interno */
     border: none; /* Quita el borde */
     border-radius: 2vw; /* Borde redondeado */
     text-align: center; /* Alineación del texto */
     text-decoration: none; /* Quita el subrayado predeterminado */
-    
+    display: inline-block; /* Mostrar como bloque en línea */
     font-size: 1vw; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar el ratón */
     
 }
 
-.boton{
+.boton_verde{
     
     color: #f2f2f2;
     

@@ -19,12 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Lo q sea</title>
     <script src="https://kit.fontawesome.com/a8c2996f32.js" crossorigin="anonymous"></script>
-    
+
     <title>Document</title>
 </head>
 <body>
 
-    <header >
+     <header >
         <div class="container_header">
             <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>
             <div class="logo__empresa"><img class="logo__bt" src="../IMG/logo_final.png"></div>
@@ -47,9 +47,8 @@
         <section class="container-fluid p-3">
             <div id="app" >
 
-                <!-- Botón Nuevo -->
-                
-                <a href="ingresarContacto.html" class="nuevo">Ingresar contacto</a>
+                <!-- Botón Nuevo (Azul) -->
+                <a class="nuevo" href="ingresar_producto.html">Agregar Producto</a>
 
                 <section v-if="error">Lo sentimos se produjo un error</section>
                 <section v-else>
@@ -63,45 +62,32 @@
                         <div >
                             <table class="table table-success table-hover">
                                 <thead>
-                                    <tr class="table-dark">
+                                    <tr>
                                         <th >ID</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
-                                        <th>Dni</th>
-                                        <th>Telefono</th>
-                                        <th>Mail</th>
-                                        <th>Comentario</th>
+                                        <th >Nombre</th>
+                                        <th >Precio</th>
+                                        <th >Imagen</th>
                                         <th>Eliminar</th>
                                         <th>Editar</th>
                                     </tr>
                                 </thead>
-                                <tbody >
+                                <tbody>
                                    
-                                    <tr v-for="contacto in contactos">
-                                        <td >{{contacto.id}}</td>
-                                        <td>{{contacto.nombre}}</td>
-                                        <td>{{contacto.apellido}}</td>
-                                        <td>{{contacto.dni}}</td>
-                                        <td>{{contacto.telefono}}</td>
-                                        <td>{{contacto.mail}}</td>
-                                        <td>{{contacto.texto}}</td>
-                                      
+                                    <tr v-for="producto in productos">
+                                        <td >{{producto.idpro}}</td>
+                                        <td>{{producto.nompro}}</td>
+                                        <td>{{producto.preciopro}}</td>
+
+                                        <!-- <td>{{producto.urlimgpro}}</td> -->
+                                        <!-- Muestro la Imagen del Producto -->
+                                        <!-- Ver: Vue Table With Image - https://fontawesomeicons.com/fa/vue-table-with-image -->
+                                        <td><img :src="producto.urlimgpro" style="width: 50px; height: 50px"></td>
+                                        <td>
+                                            <button class="boton_rojo" type="button"  v-on:click="eliminar(producto.id)"><i class="fa-solid fa-trash fa-lg" ></i></button>
+                                        </td>
                                         
                                         <td>
-                                            
-                                            <button class="boton_rojo" type="button" v-on:click="eliminar(contacto.id)" ><i class="fa-solid fa-trash fa-lg" ></i></button>
-                                        </td>
-                                        <td>
-                                            <a class="boton_verde" :href="'editarContacto.html?id='
-                                            + contacto.id+
-                                            '&nombre=' 
-                                            +contacto.nombre+
-                                            '&apellido='+contacto.apellido+
-                                             '&dni='+contacto.dni +  
-                                             '&telefono='
-                                             +contacto.telefono+
-                                             '&texto='
-                                             +contacto.texto"><i class="fa-solid fa-user-pen"></i></a>
+                                            <a class="boton_verde" :href="'editar_producto.html?idpro='+ producto.idpro+'&nompro=' +producto.nompro+'&preciopro=' +producto.preciopro+'&urlimgpro=' +producto.urlimgpro" ><i class="fa-solid fa-user-pen"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -115,21 +101,11 @@
 
     </main>
 
-    <footer>
-        <div class="container__footer">
-            <h3 class="text__footer">Codo a Codo </h3>
-            <div class="container__ico">
-                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
-                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
-                <div class="ico__footer"><i class="fa-brands fa-twitter" style="color: #f2f4f8;"></i></div>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="../JS_BACK/ingresarContacto.js"></script>
-    <script src="../JS_BACK/tablaContactos.js"></script>
-    
+    <script src="../JS_BACK/ingresar_producto.js"></script>
+    <script src="../JS_BACK/tabla_productos.js"></script>
 </body>
 </html>

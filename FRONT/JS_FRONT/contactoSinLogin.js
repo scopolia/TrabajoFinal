@@ -30,7 +30,7 @@ function guardar() {
         .then(function () {
             
         alert("GUARDADO") 
-        window.location.href = "./Nosotros.html";
+        window.location.href = "../index.html";
        
             
         })
