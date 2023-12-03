@@ -23,7 +23,8 @@ body{
 
 
 .container__bt{
-    margin-left: 35%;   
+    width: 100%;  
+    justify-self: flex-end;
 }
 
 
@@ -61,8 +62,10 @@ body{
 
 .item__menu{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     gap: 3vw;
-    margin-left: 30%;
+    
 }
 
 
@@ -125,6 +128,7 @@ body{
 
 
     .container__bt{
+       
         margin-top: 2vw;
         margin-left: -9vw;
         background: rgb(33, 33, 33);        
@@ -132,6 +136,7 @@ body{
 
    
     .item__menu{
+        
         visibility: hidden;
         height: -webkit-fill-available;
         width: 50%;
