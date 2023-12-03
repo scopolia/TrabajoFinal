@@ -6,7 +6,7 @@ const { createApp } = Vue
     data() {
       return {
     //  url:"http://127.0.0.1:5000/productos",
-        url:"http://deporcenter.pythonanywhere.com/productos",
+        url:"https://deporcenter.pythonanywhere.com/productos",
         productos:[],
         error:false,
         cargando:true

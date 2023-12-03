@@ -3,7 +3,7 @@ const {createApp} = Vue
   createApp({
     data() {
         return {
-            url:'http://sucursales.pythonanywhere.com/sucursales',
+            url:'https://sucursales.pythonanywhere.com/sucursales',
             sucursales:[],
             error: false,
             cargando: true
