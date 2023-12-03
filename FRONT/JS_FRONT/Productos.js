@@ -1,26 +1,26 @@
-const {crearApp}= Vue
-CrearApp({
-    datos(){
-        regreso{
+const {createApp}=Vue
+createApp({
+    data(){
+        return{
             url:"http://deporcenter.pythonanywhere.com/productos",
             productos:[],
            
         }
     },
-    métodos:{
+    methods:{
         getProductos(url){
-            buscar(url)
-            .entonces(Respuesta=> Respuesta.json())
-            .entonces(datos=>{esta.productos= datos})
- consola.log(datos)
-            .atrapar(err=>{
- consola.error(err)
+            fetch(url)
+            .then(Response=> Response.json())
+            .then(data=>{this.productos=data})
+                console.log(data)
+            .catch(err=>{
+                console.error(err)
             })
         }
     }, 
-    montado() {
-        esta.getProductos(esta.url)
+    mounted() {
+        this.getProductos(this.url)
 
     },  
     
-}).monte("#app")
+}).mount("#app")
