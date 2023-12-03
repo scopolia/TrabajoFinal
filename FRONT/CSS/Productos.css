@@ -1,0 +1,106 @@
+. .container_titulo{
+    mostrar: flexionarionarionar;
+    tamaño fuente: 3vw;
+    justificar-contenido: centro;
+    margen superior: 4vh;
+    acolchado: 3vw;
+}
+. .titulo_card{
+    color: rgb(117)), 116), 117)));
+    sombra de texto: 1px 1px 2px  rgb(198, 107)), 107)));
+}
+
+
+. .container_card{
+    mostrar: flexionarionarionar;
+    envoltura flexible: envoltura;
+    
+}
+
+. .body_card{
+    sombra de caja: 3px 3px 8px rgba(112), 1, 1, 0,56);
+    radio fronterizo: 15px;
+    ancho: 20))vw;
+    altura: 68)vh;
+    fondo:rgb(245, 245, 245);
+    margen: 2vw;
+}
+
+img{
+    ancho: 23))vw;
+    altura: 34))vh;
+    frontera: sólido 1.5px gris;
+    radio fronterizo: 12))px;
+   
+
+}
+
+
+. .img_card{
+  
+    mostrar: flexionarionarionar;
+    acolchado: 2vw;
+}
+
+.marca_card{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    font-size: 2vw;
+    color:  rgb(130, 128, 130);
+    margin: auto;
+    font-family:Barlow Condensed ;
+    
+
+}
+
+.precio_card{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    color: purple;
+    margin-top: 5vh;
+}
+
+
+
+/ * =============================___RESPONSIVE__ ================================ * /
+
+@media screen  and (max-width: 550px){
+
+. .container_card{
+    mostrar: bloquear;
+   
+    
+}
+.body_card{
+    box-shadow: 3px 3px 8px rgba(112, 1, 1, 0.56);
+    radio fronterizo: 15px;
+    ancho: 80)%;
+    height: 60vh;
+    
+    background: rgb(245, 245, 245);
+    margin: 4vh auto 2vh auto;
+}
+.img_card{
+    display: flex;
+    justificar-contenido: centro;
+   acolchado: 8vw;
+}
+img{
+    width: 80%;
+    
+    
+}
+. .marca_card{
+    tamaño fuente: 8vw;
+    margen superior: 3vw;
+}
+.precio_card{
+    font-size: 9vw;
+}
+.titulo_card{
+    tamaño fuente: 8vw;
+    texto-alinear: centro;
+}
+}
