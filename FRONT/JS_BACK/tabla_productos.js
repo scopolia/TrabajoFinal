@@ -37,7 +37,7 @@ const { createApp } = Vue
         // el id se necesita para buscar en la DB y eliminarlo
         eliminar(idpro) {
         //  const url = 'http://localhost:5000/borrar_productos/' + idpro;
-            const url = 'http://deporcenter.pythonanywhere.com/borrar_productos/' + idpro;
+            const url = 'https://deporcenter.pythonanywhere.com/borrar_productos/' + idpro;
             var options = {
                 method: 'DELETE',
             }

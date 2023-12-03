@@ -17,7 +17,7 @@ function guardar() {
     console.log(enviar_producto);
     
     // let url = "http://localhost:5000/registro_productos"
-    let url = "http://deporcenter.pythonanywhere.com/registro_productos"
+    let url = "https://deporcenter.pythonanywhere.com/registro_productos"
     var options = {
         body: JSON.stringify(enviar_producto),
         method: 'POST',

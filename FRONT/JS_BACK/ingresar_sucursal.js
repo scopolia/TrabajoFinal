@@ -14,7 +14,7 @@ function guardar() {
     }
     console.log(datos);
 
-    let url = "http://sucursales.pythonanywhere.com/registro"
+    let url = "https://sucursales.pythonanywhere.com/registro"
     var options = {
         body: JSON.stringify(datos),
         method: 'POST',

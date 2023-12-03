@@ -31,7 +31,7 @@ const {createApp} = Vue
         },
         
         eliminar(id) {
-            const url = 'http://sucursales.pythonanywhere.com/borrar/' +id;
+            const url = 'https://sucursales.pythonanywhere.com/borrar/' +id;
             var options = {
                 method: 'DELETE',
             }

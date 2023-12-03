@@ -40,7 +40,7 @@ function modificar() {
     }
     
     // let url = "http://localhost:5000/update_productos/"+idpro
-    let url = "http://deporcenter.pythonanywhere.com/update_productos/"+idpro    
+    let url = "https://deporcenter.pythonanywhere.com/update_productos/"+idpro    
     var options = {
         body: JSON.stringify(producto),
         method: 'PUT',
